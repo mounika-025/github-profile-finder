@@ -1,10 +1,11 @@
 import UserList from "../Components/Users/UserList"
+import UsersSearch from "../Components/Users/UsersSearch"
 
 function Home(){
     return(
         <div>
-            <h1 className="text-5xl mb-2">Hello!</h1>
-            {/* {user} */}
+            
+            <UsersSearch/>
             <UserList/>
 
 

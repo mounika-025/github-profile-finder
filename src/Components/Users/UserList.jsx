@@ -1,28 +1,13 @@
-import { useEffect,useState } from "react"
+import { useContext } from "react"
 import Spinner from "../Layout/Spinner"
 import UserCard from "../Users/UserCard"
+import GithubContext from "../../context/github/GithubContext"
 
 
 
 function UserList(){
-    const [user,setUser]=useState()
-    const [loading,setLoading]=useState(true)
-    useEffect(()=>{
-        getUser()
+    const {user,loading}=useContext(GithubContext)
 
-    },[])
-
-    const getUser=async()=>{
-        const response=await fetch(`https://api.github.com/users`,{
-            headers:{
-                Authorization: "Bearer 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"
-            }
-        })
-        const data =await response.json()
-        console.log(data)
-        setUser(data)
-        setLoading(false)
-    }
 
     if(!loading){
         return(
