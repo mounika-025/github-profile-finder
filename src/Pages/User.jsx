@@ -7,6 +7,7 @@ import {Link} from 'react-router-dom'
 
 import { FaCodepen,FaStore,FaUserFriends,FaUsers } from "react-icons/fa"
 import Spinner from "../Components/Layout/Spinner"
+import RepoList from "../Components/Repos/RepoList"
 
 
 function User(){
@@ -162,7 +163,7 @@ function User(){
             </div>
           </div>
         </div>
-        {/* <RepoList repos={repos} /> */}
+        <RepoList repos={repos} />
       </div>
         </>
     );

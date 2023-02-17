@@ -30,7 +30,7 @@ export const GithubProvider =({children})=>{
 
         const response=await fetch(`https://api.github.com/search/users?${param}`,{
             headers:{
-                Authorization: "Bearer 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"
+                Authorization: "Bearer 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"
             }
         })
         const {items} =await response.json()
@@ -51,7 +51,7 @@ export const GithubProvider =({children})=>{
 
         const response=await fetch(`https://api.github.com/users/${login}`,{
             headers:{
-                Authorization: "Bearer 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"
+                Authorization: "Bearer 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"
             }
         })
 
@@ -80,7 +80,7 @@ const getRepos=async(login)=>{
 
     const response=await fetch(`https://api.github.com/users/${login}/repos`,{
         headers:{
-            Authorization: "Bearer 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"
+            Authorization: "Bearer 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"
         }
     })
     const data =await response.json()
